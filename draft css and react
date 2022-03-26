@@ -1,0 +1,55 @@
+//card.js
+import React from 'react'
+
+export default function Card(props) {
+  return (
+  // <>
+    <div className='vote'>
+        <div className ='voteTitle'>{props.title}</div>
+         <div className = 'voteContent'>
+            {props.content}
+         </div>
+
+    </div>
+  
+  // </>  
+
+  )
+}
+
+
+//app.js
+import './App.css';
+
+import TestHeader from './components/TestHeader';
+import Card from './components/Card';
+function App() {
+  return (
+    <div>
+      <TestHeader/>
+      <h1>Dashboard</h1>
+      <Card title = "Vote.io" content = "where democracy meets technology"/>
+    </div>
+  );
+}
+
+export default App;
+
+
+//index.css
+
+.vote{
+  background-color: lightblue;
+  color: white ;
+  padding: 30px;
+  margin: 30px;
+}
+
+.voteTitle{
+  font-size: 100
+}
+
+.voteContent{
+  font-size: 50;
+}
+
